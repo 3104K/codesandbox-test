@@ -1,12 +1,17 @@
-import "./styles.css";
+/**
+ * const,letの変数宣言
+ */
 
-document.getElementById("app").innerHTML = `
-<h1>Hello Vanilla!</h1>
-<div>
-  We use the same configuration as Parcel to bundle this sandbox, you can find more
-  info about Parcel 
-  <a href="https://parceljs.org" target="_blank" rel="noopener noreferrer">here</a>.
-</div>
-`;
+// オブジェクトのプロパティはconstでも変更可能
+const val = {
+  name: "佐藤",
+  age: 30
+};
 
-console.log("test");
+console.log(val);
+
+val.name = "筒香";
+val.age = "29";
+val.address = "xxx@aa.com";
+
+console.log(val);
