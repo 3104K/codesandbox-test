@@ -1,17 +1,65 @@
+// /**
+//  * const,letの変数宣言
+//  */
+
+// // オブジェクトのプロパティはconstでも変更可能
+// const val = {
+//   name: "佐藤",
+//   age: 30
+// };
+
+// console.log(val);
+
+// val.name = "筒香";
+// val.age = "29";
+// val.address = "xxx@aa.com";
+
+// console.log(val);
+
 /**
- * const,letの変数宣言
+ * テンプレート文字列
  */
 
-// オブジェクトのプロパティはconstでも変更可能
-const val = {
-  name: "佐藤",
-  age: 30
+// const name = "櫻井翔";
+// const age = 44;
+
+// //  従来
+// const message1 = "私の名前は" + name + "です。年齢は" + age + "歳です。";
+// console.log(message1);
+
+// // テンプレート文字列
+// const message2 = `私の名前は${name}です。年齢は${age}歳です。`;
+// console.log(message2);
+
+/**
+ * アロー関数
+ */
+
+// 従来の関数
+
+// **********方法１**********
+// function func1(str) {
+//   return str;
+// }
+// **********方法２**********
+const func1 = function (str) {
+  return str;
 };
+console.log(func1("テストです"));
 
-console.log(val);
+// アロー関数
+// **********方法１**********
+// const func2 = (str) => {
+//   return str;
+// };
+// **********方法2**********
+// 一行での場合は省略可能(Javaと同じ)
+const func2 = (str) => str;
 
-val.name = "筒香";
-val.age = "29";
-val.address = "xxx@aa.com";
+// アロー関数とfunctionでthisの扱いが異なる点は注意が必要
 
-console.log(val);
+console.log(func2("テスト２です"));
+
+/**
+ * 分割代入
+ */
