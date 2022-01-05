@@ -62,4 +62,30 @@ console.log(func2("テスト２です"));
 
 /**
  * 分割代入
+ * よく使うもの
  */
+const myProfile = {
+  name: "さとし",
+  age: 28
+};
+
+//　 普通(オブジェクト)
+// いちいちドットを入れるのがめんどくさい、可読性が悪い
+const message1 = `名前は${myProfile.name}です。年齢は${myProfile.age}歳です。`;
+console.log(message1);
+
+// 分割代(オブジェクト)
+// 定数として定義されるのでスッキリ
+const { name, age } = myProfile;
+const message2 = `名前は${name}です。年齢は${age}歳です。`;
+console.log(message2);
+
+// 普通（配列）
+const myProfile2 = ["satoshi", 28];
+const message3 = `名前は${myProfile2[0]}です。年齢は${myProfile2[1]}歳です。`;
+console.log(message3);
+
+// 順番が大事
+const [name2, age2] = myProfile2;
+const message4 = `名前は${name2}です。年齢は${age2}歳です。`;
+console.log(message4);
