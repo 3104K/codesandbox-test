@@ -89,3 +89,15 @@ console.log(message3);
 const [name2, age2] = myProfile2;
 const message4 = `名前は${name2}です。年齢は${age2}歳です。`;
 console.log(message4);
+
+/**
+ * デフォルト値
+ */
+
+// 通常
+const sayHello = (name) => console.log(`こんにちは！${name}さん！`);
+sayHello(); //　何も引数がないとundefindeになる ＝ バグの温床になる = そこでデフォルト値を設定できれば良いよね
+
+// デフォルト値設定
+const sayHello2 = (name = "名無し") => console.log(`こんにちは!${name}さん！`);
+sayHello2(); // 名無しさんで出力
